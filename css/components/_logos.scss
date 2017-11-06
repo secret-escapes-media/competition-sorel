@@ -1,0 +1,20 @@
+// styles for logos on site
+
+.logo {
+  display: inline-block;
+  line-height: 0;
+  &--se {
+    max-width: 120px;
+    padding-top: 3px;
+    @include bp(md){
+      max-width: 150px;
+      padding-top: 6px;
+    }
+  }
+  &--partner { // max-width for this is about 150x46px
+    max-width: 60px;
+    @include bp(md){
+      max-width: 80px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$header-height: 570px;
+$header-vertical-bp: 730px;
+
+.header {
+  height: $header-height;
+  padding-top: $s4;
+  color: $white;
+  text-align: center;
+  overflow: hidden;
+  .flexbox & {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding-top: 0;
+    // minimum height for header
+    @media (max-height:$header-vertical-bp) {
+      height: $header-height;
+    }
+  }
+  &__logos {
+    line-height: 1;
+    > * {
+      vertical-align: middle;
+      margin: $s-2;
+      @include bp(md){
+        margin: $s0;
+      }
+    }
+  }
+  &__divider {
+    display: none;
+    @include bp(sm){
+      display: inline-block;
+      height: 80px;
+      border-left: 1px solid rgba($white,.25);
+      vertical-align: middle;
+    }
+    @include bp(md){
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include page/head.html %}
+
+  <body id="top" class="page--{{page.id}}" data-current-page="{% if page.group %}{{page.group}}{% else %}{{page.id}}{% endif %}">
+
+    {% include page/tracking.html %}
+
+    <div class="bg"></div>
+
+    <div class="header">
+      <div class="row row--padding">
+        <div class="header__logos">
+          <a class="logo logo--se" href="https://www.secretescapes.com/"><img class="js-svg-swap" src="{{ site.baseurl }}/img/logo/secret-escapes.png" alt="Secret Escapes logo"></a>
+          <div class="header__divider"></div>
+          {% include components/partner-logo.html %}
+        </div>
+        <div class="space--md"></div>
+        <div class="row row--xl">
+          <h1 class="title title--display title--xxxl">{{page.title}}</h1>
+        </div>
+        <div class="space--md"></div>
+        <a id="tracking-cta-comp-header" href="#competition" class="btn btn--cyan">Enter Now</a>
+      </div>
+    </div>
+
+    <div id="page" class="row bg--white shadow">
+      <div class="site__content">
+
+        {{ content }}
+
+        <div id="competition" class="vpad--xl">
+          <div class="row row--xl text--center">
+            <div class="space--sm"></div>
+            <div class="row--padding">
+              <h2 class="title title--xs title--core">{{page.comp.message}}</h2>
+            </div>
+            <div class="space--lg"></div>
+            <div class="form">
+              <iframe src="{{page.comp.form.src}}" width="100%" height="{{page.comp.form.height}}"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row row--padding text--white text--center">
+      <div class="space--lg"></div>
+      <h2 class="title title--xl title--core">Feeling inspired?</h2>
+      <p class="text--lg text--bold">Discover Secret Escapes Northern Lights offers to tempt you</p>
+      <div class="space--sm"></div>
+      <a id="track-se-offers-northern-lights" href="https://www.secretescapes.com/search/search?query=Northern%20lights" class="btn btn--orange">View Offers</a>
+      <div class="space--xxl"></div>
+    </div>
+
+    <div class="footer">
+      <p>© Copyright <span class="js-year">2017</span> Secret Escapes</p>
+    </div>
+
+  </body>
+
+</html>

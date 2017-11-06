@@ -1,0 +1,17 @@
+$sticky-enter-height: 80px;
+
+.sticky-enter {
+  position: fixed;
+  bottom: -$sticky-enter-height;
+  display: block;
+  width: 100%;
+  height: $sticky-enter-height;
+  line-height: $sticky-enter-height;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(18,35,37,.85);
+  @include transition();
+  &.is-stuck {
+    bottom: 0;
+  }
+}

@@ -1,0 +1,11 @@
+// general styles for the project that wouldn't be a reuseable component
+
+.bg {
+  &--white { background-color: $white; }
+  &--grey-lightest { background-color: $grey-lightest; }
+}
+
+.form {
+  border: 1px solid $grey-lighter;
+}
+
