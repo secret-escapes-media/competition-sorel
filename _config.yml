@@ -3,9 +3,9 @@ title: Sorel
 client:
   name: SOREL
   id: sorel
-  link: http://www.sorelfootwear.co.uk/
+  link: http://www.sorelfootwear.co.uk/?mid=em&eid=SecretEscape&nid=201710_SORUK_F17_VisitNorwayContest&utm_source=SecretEscape&utm_medium=em&utm_campaign=201710_SORUK_F17_VisitNorwayContest
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  The Northern Lights are for many, a once-in-a-lifetime experience. Win a trip to Norway’s wild north for a chance at your own Northern Lights adventure.
 baseurl: "/sorel" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 

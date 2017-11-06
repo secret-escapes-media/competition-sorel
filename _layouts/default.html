@@ -18,7 +18,7 @@
         </div>
         <div class="space--md"></div>
         <div class="row row--xl">
-          <h1 class="title title--display title--xxxl">{{page.title}}</h1>
+          <h1 class="title title--display title--xxxl">{{page.banner-title}}</h1>
         </div>
         <div class="space--md"></div>
         <a id="tracking-cta-comp-header" href="#competition" class="btn btn--cyan">Enter Now</a>
@@ -31,12 +31,10 @@
         {{ content }}
 
         <div id="competition" class="vpad--xl">
-          <div class="row row--xl text--center">
+          <div class="row row--xl row--padding text--center">
             <div class="space--sm"></div>
-            <div class="row--padding">
-              <h2 class="title title--xs title--core">{{page.comp.message}}</h2>
-            </div>
-            <div class="space--lg"></div>
+            <h2 class="title title--xs title--core">{{page.comp.message}}</h2>
+            <div class="space--md"></div>
             <div class="form">
               <iframe src="{{page.comp.form.src}}" width="100%" height="{{page.comp.form.height}}"></iframe>
             </div>

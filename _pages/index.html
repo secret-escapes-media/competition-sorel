@@ -1,13 +1,15 @@
 ---
 layout: default
 id: overview
-title: Win an epic trip to see the northern lights
+title: Win an epic trip to see the Northern Lights
+
+banner-title: Win an epic trip to see the Northern Lights
 
 comp:
   message: Enter your details below to be in with the chance of winning your very own Northern Lights adventure!
   form:
     src: https://promotion4117.strutta.me
-    height: 775
+    height: 640
 
 intro: The Northern Lights are for many, a once-in-a-lifetime experience. Electric green flutters and dances in the heavens, in a landscape that enraptures any visitor. Win a trip to Norway’s wild north for a chance at your own Northern Lights adventure.
 
@@ -15,7 +17,7 @@ topics:
 
   - id: destination
     title: Tromsø
-    content: Head to this northern outpost, 400km north of the Arctic Circle. Tromsø is a beguiling town that is surrounded by year-round snow-peaked crags, vast fjords,midnight sun in the summer and Aurora Borealis in the winter. The traditional industry was fishing, meaning Tromsø is a famed foodie destination for sampling seafood riches. Bars, cafes, galleries and restaurants offer a wealth of cultural pursuits, before heading to the wilderness to catch the elusive lights.
+    content: Head to this northern outpost, 400km north of the Arctic Circle. Tromsø is a beguiling town that is surrounded by year-round snow-peaked crags, vast fjords, midnight sun in the summer and Aurora Borealis in the winter. The traditional industry was fishing, meaning Tromsø is a famed foodie destination for sampling seafood riches. Bars, cafes, galleries and restaurants offer a wealth of cultural pursuits, before heading to the wilderness to catch the elusive lights.
 
   - id: hotel
     title: The Hotel
@@ -23,6 +25,7 @@ topics:
 
   - id: sorel
     title: SOREL
+    link: https://www.sorelfootwear.co.uk/womens-sneakchic-alpine-holiday-boot-1760721.html?dwvar_1760721_variationColor=214?mid=em&eid=SecretEscape&nid=201710_SORUK_F17_VisitNorwayContest&utm_source=SecretEscape&utm_medium=em&utm_campaign=201710_SORUK_F17_VisitNorwayContest
     content: Founded in 1962 in Canada, SOREL brings functionality, heritage and expert craftsmanship to your Arctic adventure. SOREL combines premium leathers with felt and wool combined with carefully tailored construction to make boots that are ready for anything. Take a pair of Cozy Joan boots or the men’s Madison 1964 waterproof boots to chase the Northern Lights across this northern outpost.
 ---
 
@@ -30,18 +33,18 @@ topics:
   <p>{{page.intro}}</p>
 </div>
 
-<a href="{{site.client.link}}" target="_blank"><div class="bg-img bg-img--16-9" style="background-image: url('{{site.baseurl}}/img/content/01.jpg');"></div></a>
+<a href="{{site.client.link}}" target="_blank" class="tracking-large-sorel-img" id="tracking-large-sorel-img"><div class="bg-img bg-img--16-9" style="background-image: url('{{site.baseurl}}/img/content/01.jpg');"></div></a>
 
-<div class="row row--padding-lg bg--grey-lightest vpad--xl">
+<div class="bg--grey-lightest vpad--xl">
 
   {% for content in page.topics %}
-    <div class="bob{% cycle '', ' bob--swap' %}">
+    <div class="row row--padding-lg bob{% cycle '', ' bob--swap' %}">
       <div class="bob__image">
-        <a href="{{site.client.link}}" target="_blank"><div class="bg-img bg-img--4-3" style="background-image: url('{{site.baseurl}}/img/content/{{content.id}}.jpg');"></div></a>
+        <a class="tracking-{{content.title|slugify}}-img" id="tracking-{{content.title|slugify}}-img" href="{% if content.link %}{{content.link}}{% else %}{{site.client.link}}{% endif %}" target="_blank"><div class="bg-img bg-img--4-3" style="background-image: url('{{site.baseurl}}/img/content/{{content.id}}.jpg');"></div></a>
       </div>
       <div class="bob__text">
         <div class="row">
-          <h1 class="title title--xl">{{content.title}}</h1>
+          <h1 class="title title--lg">{{content.title}}</h1>
           <p>{{content.content}}</p>
         </div>
       </div>

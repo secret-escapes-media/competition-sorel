@@ -15,6 +15,7 @@
   & + & { margin-top: $s8; }
   @include bp(xxl){
     text-align: left;
+    display: inline-block;
     &__text { padding-top: $s2; }
     & + & { margin-top: $s10; }
     .flexbox & {
